@@ -1,0 +1,21 @@
+{
+  "name": "yike_learning_Angular",
+  "homepage": "https://github.com/zhangli20080808/yike_learning_Angular",
+  "description": "this is a yike_learning_Angular",
+  "main": "",
+  "authors": [
+    "zl"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
