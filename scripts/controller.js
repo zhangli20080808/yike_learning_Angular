@@ -22,5 +22,8 @@ angular.module('controllers', [])
 
 	.controller('OlderController', ['$rootScope', '$scope', '$http', function($rootScope, $scope, $http) {
 
-		$scope.msg = 'helgsgsdglo'
+		$scope.msg = 'helgsgsdglo';
+	}])
+	.controller('AuthorController', ['$scope', function ($scope) {
+		
 	}])

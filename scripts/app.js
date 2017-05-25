@@ -4,16 +4,51 @@ var App = angular.module('App', ['ui.router','controllers']);
 
 App.config(['$stateProvider',function ($stateProvider) {
 
-	$stateProvider.state('today',{
+	//今日一刻
+	$stateProvider
+
+	.state('today',{
 		url: '/today',
 		templateUrl: 'views/today.html',
     	controller: 'TodayController'
-	}).state('older',{
+	})
+	//往期内容
+	.state('older',{
 		url: '/older',
 		templateUrl: 'views/older.html',
 		controller: 'OlderController'
 	})
-	
+	// 热门作者
+	.state('author',{
+		url: '/author',
+		templateUrl: 'views/author.html',
+		controller: 'AuthorController'
+	})
+	// 个人中心
+	.state('center',{
+		url: '/center',
+		templateUrl: 'views/center.html'
+	})
+	// 栏目浏览
+	.state('category',{
+		url: '/category',
+		templateUrl: 'views/category.html'
+	})
+	// 栏目列表
+	.state('list',{
+		url: '/list',
+		// templateUrl: 'views/list.html'
+	})
+	// 我的喜欢
+	.state('favourite',{
+		url: '/favourite',
+		templateUrl: 'views/favourite.html'
+	})
+	// shezhi
+	.state('settings',{
+		url: "/settings",
+		templateUrl: 'views/settings.html'
+	})
 }])
 
 App.run(['$rootScope', function ($rootScope, collapse) {
