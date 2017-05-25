@@ -1,5 +1,20 @@
 // 声明我们的主模块  运行之前先加载我们的模块
-var App = angular.module('App', ['ngRoute','controllers']);
+var App = angular.module('App', ['ui.router','controllers']);
+
+
+App.config(['$stateProvider',function ($stateProvider) {
+
+	$stateProvider.state('today',{
+		url: '/today',
+		templateUrl: 'views/today.html',
+    	controller: 'TodayController'
+	}).state('older',{
+		url: '/older',
+		templateUrl: 'views/older.html',
+		controller: 'OlderController'
+	})
+	
+}])
 
 App.run(['$rootScope', function ($rootScope, collapse) {
 	// 显示加载图标
@@ -11,6 +26,7 @@ App.run(['$rootScope', function ($rootScope, collapse) {
 	// 侧边栏索引
 	$rootScope.index = 0;
 
+	//全局方法
 	$rootScope.toggle = function (index) {
 		// 切换侧边栏状态
 		$rootScope.collapsed = !$rootScope.collapsed;
